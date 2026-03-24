@@ -1,0 +1,46 @@
+name: as400-sdd
+version: 1.0.0
+title: AS400-SDD Framework
+description: Spec-Driven Development Framework for AS400 RPG Development with AI Assistance
+author: noOne-Oliver
+tags:
+  - as400
+  - rpg
+  - ibm-i
+  - development
+  - sdd
+  - spec-driven
+
+# Skill 加载信息
+copilot:
+  category: development
+  triggers:
+    - "as400"
+    - "rpg"
+    - "spec"
+    - "sdd"
+  instructions: .copilot/md/instructions.md
+
+opencode:
+  instructions: .opencode/instructions.md
+
+# 框架元数据
+framework:
+  name: AS400-SDD Framework Lite
+  description: 轻量级 AS400 开发框架，基于 Spec-Driven Development
+  version: 3.0.0
+  supports:
+    - Fixed Format (旧版 RPG)
+    - Free Format (现代 RPGLE)
+    - 混用模式
+
+# 默认配置
+defaults:
+  code_format: free
+  review_required: true
+  spec_required: true
+
+# 限制
+limits:
+  max_file_size: 100KB
+  max_spec_complexity: high
