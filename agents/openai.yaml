@@ -1,0 +1,4 @@
+interface:
+  display_name: "AS400 SDD Skill"
+  short_description: "IBM i RPGLE first-draft generation by team samples"
+  default_prompt: "Use $as400-sdd-skill to select the closest team-style template and generate a new IBM i RPGLE program draft with assumptions, spec summary, code, and self-check."

@@ -1,11 +1,11 @@
 # AS400-SDD Framework Skill
 
 > Spec-Driven Development Framework for AS400 RPG Development
-> 支持 Copilot Chat 和 OpenCode CLI
+> 支持 Codex Skill、Copilot Chat 和 OpenCode CLI
 
 ## 概述
 
-这是一个 AS400 RPG 开发的 AI 辅助框架，基于 Spec-Driven Development (SDD) 理念设计。
+这是一个面向 IBM i / AS400 RPG 开发的 AI 辅助框架，基于 Spec-Driven Development (SDD) 理念设计。
 
 ### 核心能力
 
@@ -13,16 +13,28 @@
 - **代码生成** — 支持 Fixed/Free Format
 - **Code Review** — 完整检查清单
 - **幻觉预防** — 防止 Copilot 生成错误字段
+- **现代化改造** — 支持 Fixed 转 Free 的渐进式重构
 
 ### 适用场景
 
-- AS400 RPG 开发
+- IBM i / AS400 RPG 开发
 - Fixed Format（旧版 RPG）和 Free Format（现代 RPGLE）双支持
 - 封闭环境（仅有 GitHub Copilot + OpenCode CLI）
+- Codex 本地技能调用
 
 ---
 
 ## 安装
+
+### Codex
+
+直接在 Codex 中引用此技能：
+
+```markdown
+$as400-sdd-skill
+```
+
+核心工作流定义在 [`SKILL.md`](./SKILL.md)，详细参考资料在 [`references/`](./references/)。
 
 ### Copilot Chat
 
@@ -89,15 +101,22 @@ AI 按照 Review 清单检查代码。
 
 ## 目录结构
 
-```
+```text
 as400-sdd-skill/
+├── SKILL.md                  ← Codex 原生技能入口
+├── agents/
+│   └── openai.yaml           ← Codex UI 元数据
+├── references/
+│   ├── spec-template.md
+│   ├── review-checklist.md
+│   └── format-guide.md
 ├── .copilot/
 │   └── md/
-│       └── instructions.md    ← Copilot Chat Skill
+│       └── instructions.md   ← Copilot Chat Skill
 ├── .opencode/
 │   └── instructions.md       ← OpenCode CLI Skill
 ├── README.md
-└── LICENSE
+└── skill.yaml
 ```
 
 ---

@@ -1,7 +1,7 @@
-name: as400-sdd
-version: 1.0.0
+name: as400-sdd-skill
+version: 1.1.0
 title: AS400-SDD Framework
-description: Spec-Driven Development Framework for AS400 RPG Development with AI Assistance
+description: Spec-driven development workflow for IBM i / AS400 RPG engineering, code generation, review, and modernization with explicit hallucination controls
 author: noOne-Oliver
 tags:
   - as400
@@ -27,8 +27,8 @@ opencode:
 # 框架元数据
 framework:
   name: AS400-SDD Framework Lite
-  description: 轻量级 AS400 开发框架，基于 Spec-Driven Development
-  version: 3.0.0
+  description: 轻量级 AS400 开发框架，基于 Spec-Driven Development，并补充 Codex 原生技能结构
+  version: 3.1.0
   supports:
     - Fixed Format (旧版 RPG)
     - Free Format (现代 RPGLE)
